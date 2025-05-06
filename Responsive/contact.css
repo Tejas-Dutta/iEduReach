@@ -1,0 +1,33 @@
+@media only screen and (max-width: 768px) {
+
+    #contact {
+        margin-top: 6vh;
+    }
+    .contact-main-box {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .contact-info {
+        padding: 3vh;
+        width: 100%;
+    }
+    .touch {
+        margin: 0px;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .contact-form {
+        padding: 2vh;
+        width: 100%;
+    }
+    .contact-main-box {
+        height: auto;
+    }
+    .c-social-media .example-2 {
+        justify-content: center;
+        margin-left: -12px;
+    }
+}
