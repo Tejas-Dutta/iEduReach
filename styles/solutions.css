@@ -1,0 +1,133 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main {
+    margin-top: 100px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.solution {
+    background-color: white;
+}
+
+/* Animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heading-text{
+  font-size: 7rem;
+  background: linear-gradient( #ffbd1f, #086498);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+}
+
+.main-container {
+    /* height: 500px; */
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    padding: 80px 200px 100px 200px;
+}
+
+.main-container h2 {
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+}
+
+
+.div1 p {
+    margin: 30px;
+    font-size: 16px;
+    line-height: 28px ;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+  }
+  
+  button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
+  .div2-1{
+    display: flex;
+    padding: 5vh;
+    /* background-color: red; */
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  .div2-1-1{
+    width: 100%;
+    background-image: url("../assets/admission-solutions-for-education-industry.webp");
+    background-position: center;
+    background-size: cover;
+    /* height: 33vh; */
+    border-radius: 20px;
+
+  }
+  .div2-1-2{
+    border: 1px solid gainsboro;
+    padding: 20px;
+    border-radius: 10px;
+    width: 35%;
+  }
+  .div2-1-2 h3{
+    text-align: center;
+    font-size: 24px;
+    line-height: 26.4px;
+    letter-spacing: -0.4px;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  }
+
+  .div2-1-2 p{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 25.6px;
+    
+  }
+  .img-container{
+    display: flex;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 35vw;
+    border: 1px solid gainsboro;
+    /* box-shadow: 2px solid gray; */
+    height: 48vh;
+    /* background-color: gray; */
+    border-radius: 20px;
+  }

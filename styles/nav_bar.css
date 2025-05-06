@@ -1,0 +1,330 @@
+/* Googlefont Poppins CDN Link */
+/* Resetting default margin and padding for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'STIX'; /* Setting the default font family */
+  }
+  
+  /* Setting the minimum height for the body to cover the full viewport */
+  body{
+    min-height: 100vh;
+  }
+
+  /* Animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+  /* Styling the navigation bar */
+  nav{
+    position: fixed; /* Fixing the navbar at the top */
+    top: 0; /* Aligning it to the top */
+    left: 0; /* Aligning it to the left */
+    width: 100%; /* Full width */
+    height: 70px; /* Fixed height */
+    background: #ffffff; /* White background */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+    z-index: 99; /* Ensuring it stays above other elements */
+  }
+  
+  /* Styling the navbar container */
+  nav .navbar{
+    height: 100%; /* Full height of the navbar */
+    max-width: 1250px; /* Maximum width */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    margin: auto; /* Centering the navbar */
+    padding: 0 50px; /* Horizontal padding */
+  }
+  
+  /* Styling the logo inside the navbar */
+  .navbar .logo img{
+    width: 175px; /* Fixed width for the logo */
+    height: auto; /* Auto height to maintain aspect ratio */
+    padding: auto; /* Centering the logo */
+    object-fit: contain; /* Containing the logo within its box */
+    transform: transform 0.3s ease; /* Smooth transition for hover effect */ 
+  }
+  
+  /*.navbar .logo img:hover{
+    transform: scale(1.1) /* Scaling the logo on hover */
+  /*}*/
+  
+  
+  /* Styling the navigation links container */
+  nav .navbar .nav-links{
+    line-height: 70px; /* Aligning links vertically */
+    height: 100%; /* Full height */
+  }
+  
+  /* Styling the links list */
+  nav .navbar .links{
+    display: flex; /* Displaying links in a row */
+  }
+  
+  /* Styling individual list items */
+  nav .navbar .links li{
+    position: relative; /* For dropdown positioning */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    list-style: none; /* Removing bullet points */
+    padding: 0 14px; /* Horizontal padding */
+  }
+  
+  /* Styling anchor tags inside list items */
+  nav .navbar .links li a{
+    height: 100%; /* Full height */
+    text-decoration: none; /* Removing underline */
+    white-space: nowrap; /* Preventing text wrap */
+    color: #000000; /* Black text color */
+    font-size: 15px; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    position: relative; /* For underline effect */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  nav .navbar .links li a::after{
+    content: ''; /* Empty content for underline effect */
+      position: absolute; /* Position relative to the link */
+      bottom: 0; /* Position at the bottom of the link */
+      left: 0; /* Start from the left */
+      width: 0; /* Initially hidden */
+      height: 2px; /* Thickness of the underline */
+      background-color: #ffbd1f; /* Blue underline color */
+      transition: width 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  nav .navbar .links li a:hover{
+    color: #086498; /* Change text color on hover */
+  }
+  
+  nav .navbar .links li a:hover::after,
+  nav .navbar .links li a.active::after {
+      width: 100%; /* Full underline on hover or active state */
+  }
+  
+  nav .navbar .links li a.active {
+    color: #086498; /* Highlight active link */
+  }
+  
+  /* Rotating arrows on hover */
+  .links li:hover .htmlcss-arrow,
+  .links li:hover .js-arrow{
+    transform: rotate(180deg); /* Rotating the arrow */
+  }
+  
+  /* Styling dropdown arrows */
+  nav .navbar .links li .arrow{
+    height: 100%; /* Full height */
+    width: 22px; /* Fixed width */
+    line-height: 70px; /* Aligning vertically */
+    text-align: center; /* Centering text */
+    display: inline-block; /* Inline-block display */
+    color: #000000; /* Black color */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Styling dropdown menus */
+  nav .navbar .links li .sub-menu{
+    position: absolute; /* Absolute positioning */
+    top: 70px; /* Below the navbar */
+    left: 0; /* Aligning to the left */
+    line-height: 40px; /* Line height for items */
+    background: #ffffff; /* White background */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 0 0 4px 4px; /* Rounded bottom corners */
+    width: auto; /* Full width */
+    display: none; /* Hidden by default */
+    z-index: 2; /* Above other elements */
+  }
+  
+  /* Displaying dropdown menus on hover */
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: block; /* Show dropdown */
+  }
+  
+  /* Styling dropdown list items */
+  .navbar .links li .sub-menu li{
+    padding: 0 22px; /* Horizontal padding */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle border */
+  }
+  
+  /* Styling links inside dropdown menus */
+  .navbar .links li .sub-menu a{
+    color: #000000; /* Black text color */
+    font-size: 15px; /* Font size */
+    font-weight: 500; /* Medium font weight */
+  }
+  
+  /* Styling nested dropdown arrows */
+  .navbar .links li .sub-menu .more-arrow{
+    line-height: 40px; /* Aligning vertically */
+  }
+  
+  /* Styling nested dropdown menus */
+  .navbar .links li .sub-menu .more-sub-menu{
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Aligning to the top */
+    left: 100%; /* Aligning to the right of parent menu */
+    border-radius: 0 4px 4px 4px; /* Rounded corners */
+    z-index: 1; /* Above other elements */
+    display: none; /* Hidden by default */
+  }
+  
+  /* Displaying nested dropdown menus on hover */
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: block; /* Show nested dropdown */
+  }
+  
+  /* Hiding sidebar logo by default */
+  .navbar .nav-links .sidebar-logo{
+    display: none;
+  }
+  
+  /* Hiding menu icon by default */
+  .navbar .bx-menu{
+    display: none;
+  }
+  
+  /* Responsive styles for screens smaller than 920px */
+  @media (max-width:920px) {
+    nav .navbar{
+      max-width: 100%; /* Full width */
+      padding: 0 25px; /* Reduced padding */
+    }
+    nav .navbar .logo img{
+      width: 150px; /* Smaller logo size */
+    }
+    nav .navbar .links li{
+      padding: 0 10px; /* Reduced padding */
+      white-space: nowrap; /* Prevent text wrap */
+    }
+    nav .navbar .links li a{
+      font-size: 15px; /* Smaller font size */
+    }
+  }
+  
+  /* Responsive styles for screens smaller than 800px */
+  @media (max-width:800px){
+    nav{
+       position: relative; 
+    }
+    .navbar .bx-menu{
+      display: block; /* Show menu icon */
+    }
+    nav .navbar .nav-links{
+      position: fixed; /* Fixed positioning */
+      top: 0; /* Aligning to the top */
+      left: -100%; /* Hidden off-screen */
+      display: block; /* Block display */
+      max-width: auto; /* Fixed width */
+      width: 100%; /* Full width */
+      background:  #ffffff; /* White background */
+      line-height: 50px; /* Line height for items */
+      padding: 20px; /* Padding */
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+      transition: all 0.5s ease; /* Smooth transition */
+      z-index: 1000; /* Above other elements */
+    }
+    .navbar .nav-links .sidebar-logo{
+      display: flex; /* Flexbox for alignment */
+      align-items: center; /* Center items vertically */
+      justify-content: space-between; /* Space between items */
+    }
+  
+    .sidebar-logo .logo-name img{
+      width: 150px; /* Fixed width for the logo */
+      height: auto; /* Auto height to maintain aspect ratio */
+      padding: auto; /* Centering the logo */
+      object-fit: contain; /* Containing the logo within its box */
+      transform: transform 0.3s ease; /* Smooth transition for hover effect */ 
+    }
+  
+    .sidebar-logo  i,
+    .navbar .bx-menu{
+      display: block; /* Block display */
+      font-size: 45px; /* Icon size */
+      color: #000000; /* Black color */
+    }
+    nav .navbar .links{
+      display: block; /* Block display */
+      margin-top: 20px; /* Top margin */
+    }
+    nav .navbar .links li .arrow{
+      line-height: 40px; /* Aligning vertically */
+    }
+    nav .navbar .links li{
+      display: block; /* Block display */
+    }
+    nav .navbar .links li .sub-menu{
+      position: relative; /* Relative positioning */
+      top: 0; /* Aligning to the top */
+      box-shadow: none; /* Removing shadow */
+      display: none; /* Hidden by default */
+    }
+    nav .navbar .links li .sub-menu li{
+      border-bottom: none; /* Removing border */
+    }
+    .navbar .links li .sub-menu .more-sub-menu{
+      display: none; /* Hidden by default */
+      position: relative; /* Relative positioning */
+      left: 0; /* Aligning to the left */
+    }
+    .navbar .links li .sub-menu .more-sub-menu li{
+      display: flex; /* Flexbox for alignment */
+      align-items: center; /* Center items vertically */
+      justify-content: space-between; /* Space between items */
+    }
+    .links li:hover .htmlcss-arrow,
+    .links li:hover .js-arrow{
+      transform: rotate(0deg); /* Reset rotation */
+    }
+    .navbar .links li .sub-menu .more-sub-menu{
+      display: none; /* Hidden by default */
+    }
+    .navbar .links li .sub-menu .more span{
+      display: flex; /* Flexbox for alignment */
+      align-items: center; /* Center items vertically */
+    }
+    .links li .sub-menu .more:hover .more-sub-menu{
+      display: none; /* Hidden by default */
+    }
+    nav .navbar .links li:hover .htmlCss-sub-menu,
+    nav .navbar .links li:hover .js-sub-menu{
+      display: none; /* Hidden by default */
+    }
+    .navbar .nav-links.show1 .links .htmlCss-sub-menu,
+    .navbar .nav-links.show3 .links .js-sub-menu,
+    .navbar .nav-links.show2 .links .more .more-sub-menu{
+      display: block; /* Show dropdowns */
+    }
+    .navbar .nav-links.show1 .links .htmlcss-arrow,
+    .navbar .nav-links.show3 .links .js-arrow{
+      transform: rotate(180deg); /* Rotate arrows */
+    }
+    .navbar .nav-links.show2 .links .more-arrow{
+      transform: rotate(90deg); /* Rotate arrows */
+    }
+  }
+  
+  /* Responsive styles for screens smaller than 370px */
+  @media (max-width:370px){
+    nav .navbar .nav-links{
+      max-width: 100%; /* Full width */
+    }
+  }
+  
